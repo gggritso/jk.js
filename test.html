@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jk.js</title>
+</head>
+<body>
+
+  <h1>Hi!</h1>
+  <div id="target"></div>
+
+  <script src="/vendor/jquery.js"></script>
+  <script src="/vendor/snap.svg.js"></script>
+  <script src="/vendor/rsvp.js"></script>
+
+  <script src="/src/dispatch.js"></script>
+  <script src="/src/snitch.js"></script>
+  <script src="/src/router.js"></script>
+  <script src="/src/view.js"></script>
+  <script src="/src/connection.js"></script>
+  <script src="/src/storage.js"></script>
+  <script src="/src/utils.js"></script>
+  <script src="/src/jk.js"></script>
+
+  <script>
+
+  $( function() {
+
+    var template = function( data ) {
+      return '<h2>Hi, ' + data.name + '</h2>';
+    };
+
+    jk.views.home = new View({
+      template: template,
+      target: '#target'
+    });
+
+    jk.router.on( 'navigation', function( event, path ) {
+
+      if ( path.path === '/' ) {
+        jk.views.home.render({ name: 'George' });
+      }
+
+    });
+
+    jk.router.kickoff();
+
+  });
+
+  </script>
+</body>
+</html>

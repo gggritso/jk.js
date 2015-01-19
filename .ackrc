@@ -1,0 +1,2 @@
+--ignore-directory=dist
+--ignore-directory=vendor

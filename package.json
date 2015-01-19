@@ -1,0 +1,20 @@
+{
+  "name": "jk.js",
+  "version": "0.0.0",
+  "description": "A small and strange UI framework.",
+  "main": "dist/jk.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gggritso/jk.js"
+  },
+  "author": "George Gritsouk <george.gritsouk@gmail.com>",
+  "devDependencies": {
+    "gulp": "^3.8.9",
+    "gulp-bump": "^0.1.11",
+    "gulp-concat": "^2.4.1",
+    "gulp-uglify": "^1.0.1",
+    "superstatic": "^1.1.3",
+    "yargs": "^1.3.2"
+  }
+}
